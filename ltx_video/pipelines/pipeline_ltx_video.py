@@ -939,7 +939,7 @@ class LTXVideoPipeline(DiffusionPipeline):
 
         if offload_to_cpu:
             self.text_encoder = self.text_encoder.cpu()
-
+            torch.cuda.empty_cache()
         self.transformer = self.transformer.to(self._execution_device)
 
         prompt_embeds_batch = prompt_embeds

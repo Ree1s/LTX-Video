@@ -329,11 +329,11 @@ def main():
     scheduler = RectifiedFlowScheduler.from_pretrained(ckpt_path)
 
     text_encoder = T5EncoderModel.from_pretrained(
-        "PixArt-alpha/PixArt-XL-2-1024-MS", subfolder="text_encoder"
+        "PixArt-alpha/PixArt-XL-2-1024-MS", cache_dir="/group/ossdphi_algo_scratch_14/sichegao/checkpoints/", subfolder="text_encoder"
     )
     patchifier = SymmetricPatchifier(patch_size=1)
     tokenizer = T5Tokenizer.from_pretrained(
-        "PixArt-alpha/PixArt-XL-2-1024-MS", subfolder="tokenizer"
+        "PixArt-alpha/PixArt-XL-2-1024-MS", cache_dir="/group/ossdphi_algo_scratch_14/sichegao/checkpoints/", subfolder="tokenizer"
     )
 
     if torch.cuda.is_available():

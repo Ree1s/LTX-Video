@@ -1,0 +1,16 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [ "--ckpt_path", "LTX-Video", "--prompt", "", "--input_image_path", "/group/ossdphi_algo_scratch_14/sichegao/datasets/UDM10/archpeople/blur4/000.png"]
+        }
+    ]
+}
